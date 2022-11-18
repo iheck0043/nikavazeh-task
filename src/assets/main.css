@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+/* css variables */
+:root {
+  /* light variables */
+  --light-text: hsl(200, 15%, 8%);
+  --light-input: hsl(0, 0%, 52%);
+  --light-background: hsl(0, 0%, 98%);
+  --light-elements: hsl(0, 0%, 100%);
+
+  /* dark variables */
+  --dark-text: hsl(0, 0%, 100%);
+  --dark-background: hsl(207, 26%, 17%);
+  --dark-elements: hsl(209, 23%, 22%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light-text: var(--dark-text);
+    --light-background: var(--dark-background);
+    --light-elements: var(--dark-elements);
+  }
+}
+
+/* base styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+}
+
+/* input, select elements */
+form,
+input,
+select {
+  background: var(--light-elements);
+  border: 0;
+  outline: none;
+  font-family: inherit;
+}
+
+.app.dark form,
+.app.dark input,
+.app.dark select {
+  background: var(--dark-elements);
+}
